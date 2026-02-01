@@ -4,7 +4,7 @@ function greet(person: string): string {
 
 const username: string = "Nazil Dhalwala"
 
-console.log(greet(username));
+// console.log(greet(username));
 
 
 // Type Innotation
@@ -25,3 +25,28 @@ num = 892
 
 let num2 = Math.random() > 0.50 ? 40 : '45';
 // Now it is giving number or string
+
+
+
+
+/* Union Type */
+let subscriber : number | string = 10 ;
+let subscriber2 : number | string = "1M" ;
+
+
+let apiRequest : 'pending' | 'success' | "error" = "pending";
+// apiRequest = "done"; // Won't allow
+apiRequest =  "success";
+
+
+const orders = ['12','20','28','42']
+
+let currentOrder : string | undefined
+
+for(let order of orders) {
+    if(order === '28') {
+        currentOrder = order
+    }
+}
+
+console.log(currentOrder)
